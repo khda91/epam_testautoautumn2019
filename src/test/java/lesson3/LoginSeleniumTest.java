@@ -51,6 +51,12 @@ public class LoginSeleniumTest extends AbstractBaseTest {
         contactFormPage.fillNameTextField("some name");
         contactFormPage.selectPassportCheckBox();
 
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         assertEquals(contactFormPage.getNameTextFieldValue(), "some name");
         assertTrue(contactFormPage.isPassportCheckBoxSelected());
     }

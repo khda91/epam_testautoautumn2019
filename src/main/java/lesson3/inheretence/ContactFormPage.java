@@ -1,13 +1,13 @@
 package lesson3.inheretence;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ContactFormPage extends AbstractBasePage {
 
-    @FindBy(id = "name")
+//    @FindBy(id = "name")
+    @FindBy(xpath = "//div[@class='col-sm-4']//input[@id='name']")
     private WebElement nameTextField;
 
     @FindBy(name = "passport")
@@ -18,9 +18,7 @@ public class ContactFormPage extends AbstractBasePage {
     }
 
     public void fillNameTextField(String name) {
-        ((JavascriptExecutor) driver)
-                .executeScript("arguments[0].setAttribute('value', '" + name + "')",
-                        nameTextField);
+        nameTextField.sendKeys(name);
     }
 
     public String getNameTextFieldValue() {

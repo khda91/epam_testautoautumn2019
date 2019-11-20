@@ -6,10 +6,6 @@ import org.openqa.selenium.WebElement;
 // Without Page Factory inside ContactFormPage page object
 public class ContactFormWOPFPage {
 
-    private WebDriver driver;
-
-    private WebElement name;
-
     private WebElement passport;
 
     public void selectPassportCheckBox() {
