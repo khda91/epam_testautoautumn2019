@@ -34,6 +34,6 @@ public class StepsTest extends AbstractBaseTest {
     public void failedLoginTest() {
         steps.openEpamJdiSite();
         steps.login("epam", "1234");
-        steps.usernameOnTheHomePageShouldBe("PITER CHAILOVSKII");
+        steps.usernameOnTheHomePageShouldBe("PITER CHAILOVSKII1");
     }
 }
