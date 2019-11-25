@@ -2,6 +2,7 @@ package lesson3;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.util.concurrent.TimeUnit;
+import lesson5.WebDriverSingleton;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -24,6 +25,7 @@ public abstract class AbstractBaseTest {
         driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);
         driver.manage().timeouts().pageLoadTimeout(20000, TimeUnit.MILLISECONDS);
         driver.manage().timeouts().setScriptTimeout(30000, TimeUnit.MILLISECONDS);
+        WebDriverSingleton.INSTANCE.setDriver(driver);
     }
 
     @AfterMethod
