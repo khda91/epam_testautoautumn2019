@@ -102,7 +102,7 @@
                     <reuseForks>false</reuseForks>
                     <forkCount>0</forkCount>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${suite.file}</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/TestSuite4.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

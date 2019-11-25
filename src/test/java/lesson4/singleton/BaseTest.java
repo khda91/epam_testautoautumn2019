@@ -7,6 +7,6 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        Singleton.getInstance().setValue("value1");
+        Singleton.getInstance();
     }
 }

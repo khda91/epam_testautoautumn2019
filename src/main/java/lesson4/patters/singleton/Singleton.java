@@ -23,7 +23,7 @@ public class Singleton {
     }
 
     public void setValue(String value) {
-        System.out.println("sds");
+        System.out.println(value);
         this.value = value;
     }
 }
