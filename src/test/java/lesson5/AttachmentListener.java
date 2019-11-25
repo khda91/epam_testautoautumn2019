@@ -9,7 +9,7 @@ import org.testng.TestListenerAdapter;
 
 public class AttachmentListener extends TestListenerAdapter {
 
-    @Attachment(value = "Attachment: {0}", type = "image/png")
+    @Attachment(value = "Attachment.png", type = "image/png")
     public byte[] makeScreenshot() {
         byte[] array = {1};
         try {
