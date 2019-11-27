@@ -2,13 +2,16 @@ package lesson3;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.util.concurrent.TimeUnit;
+import lesson5.AttachmentListener;
 import lesson5.WebDriverSingleton;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 
+//@Listeners({AttachmentListener.class})
 public abstract class AbstractBaseTest {
 
     protected WebDriver driver;
