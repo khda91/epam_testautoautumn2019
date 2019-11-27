@@ -1,15 +1,12 @@
 package lesson5;
 
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.testng.AllureTestNg;
 import lesson3.AbstractBaseTest;
 import lesson5.steps.Steps;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners({AllureTestNg.class, AttachmentListener.class})
+
 public class StepsTest extends AbstractBaseTest {
 
     private Steps steps;
@@ -22,7 +19,7 @@ public class StepsTest extends AbstractBaseTest {
     }
 
     @Test
-    @Severity(SeverityLevel.CRITICAL)
+//    @Severity(SeverityLevel.CRITICAL)
     public void loginTest() {
         steps.openEpamJdiSite();
         steps.login("epam", "1234");
@@ -30,7 +27,7 @@ public class StepsTest extends AbstractBaseTest {
     }
 
     @Test(testName = "Failed Login Test")
-    @Severity(SeverityLevel.CRITICAL)
+//    @Severity(SeverityLevel.CRITICAL)
     public void failedLoginTest() {
         steps.openEpamJdiSite();
         steps.login("epam", "1234");

@@ -4,4 +4,4 @@
 **/*.iml
 **/build
 **/allure-results
-**/.allure
+**/.allure/
