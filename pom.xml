@@ -21,6 +21,7 @@
         <selenide.version>5.5.0</selenide.version>
         <allure.version>2.13.0</allure.version>
         <aspectj.version>1.8.10</aspectj.version>
+        <cucumber1.version>1.2.5</cucumber1.version>
 
         <!-- Plugins version -->
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
@@ -99,11 +100,24 @@
             <version>${allure.version}</version>
         </dependency>
 
-
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.9.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber1.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber1.version}</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
