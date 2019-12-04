@@ -7,7 +7,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import static java.lang.String.*;
+import static java.lang.String.format;
+import static lesson7.jdi.entities.JdiUser.ROMAN;
 
 public class JdiSiteTests {
 
@@ -33,6 +34,22 @@ public class JdiSiteTests {
         int actualCount = JdiSite.jdiHomePage.getBenefitsCount();
         Assert.assertEquals(actualCount, EXPECTED_BENEFITS,
                 format("Expected benefits: %s, but actual: %s", actualCount, EXPECTED_BENEFITS));
+    }
+
+    @Test
+    public void jdiLoginTest() {
+        /*
+        1. Open Home Page
+        2. Fill Login form by User(Roman - Jdi1234)
+        3. Check that User Name (ROMAN IOVLEV) displayed
+         */
+
+        JdiSite.open();
+        JdiSite.login(ROMAN);
+        String actualUserName = JdiSite.jdiHomePage.getUserName();
+
+        Assert.assertEquals(actualUserName, ROMAN.getFullName(),
+                format("Expected loggined user: %s, but get %s", ROMAN, actualUserName));
     }
 
 }
